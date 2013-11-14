@@ -34,6 +34,7 @@ gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
 gem 'haml-rails'
 
 gem 'devise'
+gem 'cancan'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
