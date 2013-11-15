@@ -1,6 +1,7 @@
 - content_for :jumbotron do
-  SAMUEL NAVAS
+  = ENV["BLOG_TITLE"]
 .col-md-8.content
   = render @posts
+  = will_paginate @posts
 .col-md-4.sidebar
   = render 'layouts/sidebar'

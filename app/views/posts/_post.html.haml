@@ -1,10 +1,14 @@
 .row.post
   .title
-    %h2= post.title
-    %small= time_ago_in_words(post.created_at)
+    %h3= post.title
+    %small.actions
+      %span.glyphicon.glyphicon-time
+      %span #{post.created_at.strftime("%Y-%m-%d")}
+      - if current_user
+        .pull-right
+          =link_to edit_post_path(post) do
+            %span.glyphicon.glyphicon-edit
+          =link_to post_path(post), method: :delete, :data => { :confirm => 'Do you really want to delete this post?' } do
+            %span.glyphicon.glyphicon-remove
   .content
     = raw post.html
-
-= link_to 'Edit', edit_post_path(post)
-\|
-= link_to 'Back', posts_path
