@@ -36,6 +36,10 @@ gem 'haml-rails'
 gem 'devise'
 gem 'cancan'
 gem 'figaro'
+gem 'annotate'
+gem 'redcarpet'
+gem 'pygmentize'
+gem 'simple_form'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
