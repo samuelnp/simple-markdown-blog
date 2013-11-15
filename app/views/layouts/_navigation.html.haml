@@ -1,0 +1,19 @@
+.navbar-header.offset2
+  %button.navbar-toggle{"data-target" => ".navbar-ex1-collapse", "data-toggle" => "collapse", type: "button"}
+    %span.sr-only Toggle navigation
+    %span.icon-bar
+    %span.icon-bar
+    %span.icon-bar
+  %a.navbar-brand{href: "/"}= ENV["BLOG_TITLE"]
+/ Collect the nav links, forms, and other content for toggling
+.collapse.navbar-collapse.navbar-ex1-collapse
+  %ul.nav.navbar-nav
+    - if user_signed_in?
+      %li= link_to 'Logout', destroy_user_session_path, :method=>'delete'
+    - else
+      %li= link_to 'Login', new_user_session_path
+    - if user_signed_in?
+      %li= link_to 'Edit account', edit_user_registration_path
+    - else
+      %li= link_to 'Sign up', new_user_registration_path
+/ /.navbar-collapse

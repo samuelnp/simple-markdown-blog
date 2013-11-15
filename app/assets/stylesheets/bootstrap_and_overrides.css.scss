@@ -1,0 +1,23 @@
+$navbar-default-bg: #FFF !default;
+
+@import "bootstrap";
+
+html, body {
+  height:100%;
+}
+
+body {
+  margin-top:60px;
+}
+
+.container {
+
+}
+.content {
+  background-color: #FFF;
+}
+
+.sidebar .row {
+  padding: 20px;
+  text-align:center;
+}
