@@ -41,6 +41,10 @@ gem 'redcarpet'
 gem 'pygmentize'
 gem 'simple_form'
 
+group :development, :test do
+  gem 'rspec-rails', '~> 2.0'
+end
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

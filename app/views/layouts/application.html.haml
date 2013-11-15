@@ -15,12 +15,9 @@
         = render 'layouts/navigation'
     #main{role: "main"}
       .container
-        .row
-          .col-md-8.content
-            = render 'layouts/messages'
-            = yield
-          .col-md-4.sidebar
-            = render 'layouts/sidebar'
+        .row 
+          = render 'layouts/messages'
+          = yield
         %footer
       / ! end of .container
     / ! end of #main

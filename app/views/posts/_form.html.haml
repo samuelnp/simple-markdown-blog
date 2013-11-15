@@ -1,16 +1,58 @@
-= form_for @post do |f|
+= simple_form_for @post do |f|
   - if @post.errors.any?
     #error_explanation
       %h2= "#{pluralize(@post.errors.count, "error")} prohibited this post from being saved:"
       %ul
         - @post.errors.full_messages.each do |msg|
           %li= msg
+  .field
+    .input-group
+      %span.input-group-addon Title
+      = f.text_field :title, class: "form-control"
+  .field
+    #epiceditor
+    = f.text_area :body, id: "epiceditor-textarea"
+  .actions.pull-right
+    = f.submit 'Save', class: "btn btn-primary"
 
-  .field
-    = f.label :title
-    = f.text_field :title
-  .field
-    = f.label :body
-    = f.text_area :body
-  .actions
-    = f.submit 'Save'
+  :javascript
+
+    $(document).ready(function() {
+      var opts = {
+        container: 'epiceditor',
+        textarea: 'epiceditor-textarea',
+        basePath: '/',
+        clientSideStorage: false,
+        useNativeFullscreen: true,
+        parser: marked,
+        file: {
+          name: 'epiceditor',
+          defaultContent: '',
+          autoSave: 100
+        },
+        theme: {
+          base: 'themes/base/epiceditor.css',
+          preview: 'themes/preview/github.css',
+          editor: 'themes/editor/epic-dark.css'
+        },
+        button: {
+          preview: true,
+          fullscreen: true,
+          bar: "auto"
+        },
+        focusOnLoad: false,
+        shortcut: {
+          modifier: 18,
+          fullscreen: 70,
+          preview: 80
+        },
+        string: {
+          togglePreview: 'Toggle Preview Mode',
+          toggleEdit: 'Toggle Edit Mode',
+          toggleFullscreen: 'Enter Fullscreen'
+        },
+        autogrow: true
+      };
+      var editor = new EpicEditor(opts).load();
+    });
+    
