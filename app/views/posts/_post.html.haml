@@ -3,7 +3,7 @@
     %h3= post.title
     %small.actions
       %span.glyphicon.glyphicon-time
-      %span #{post.created_at.strftime("%Y-%m-%d")}
+      %span #{date(post.created_at)}
       - if current_user
         .pull-right
           =link_to edit_post_path(post) do

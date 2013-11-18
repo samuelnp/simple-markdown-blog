@@ -1,7 +1,7 @@
 - content_for :jumbotron do
   = ENV["BLOG_TITLE"]
 .col-md-8.content
-  = render @posts
+  = render linkable_title(@posts)
   .pagination-control
     = will_paginate @posts, renderer: BootstrapPagination::Rails
 .col-md-4.sidebar

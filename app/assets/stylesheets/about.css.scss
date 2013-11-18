@@ -1,3 +1,5 @@
+@import "variables";
+
 .about {
   background-color: #FFF;
   border: 1px solid #CCC;
@@ -5,6 +7,6 @@
   padding: 20px;
 
   h4 {
-    color: #F05051;
+    color: $brand-primary;
   }
 }

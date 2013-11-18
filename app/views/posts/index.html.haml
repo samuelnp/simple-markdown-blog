@@ -1,6 +1,17 @@
 - content_for :jumbotron do
-  SAMUEL NAVAS
-.col-md-8.content
-  = render @posts
-.col-md-4.sidebar
-  = render 'layouts/sidebar'
+  Administer Posts
+.col-md-12.content
+  %table.table.table-striped
+    %tr
+      %th Post
+      %th
+      %th
+    - @posts.each do |post|
+      %tr
+        %td= post.title
+        %td
+          =link_to edit_post_path(post) do
+            %span.glyphicon.glyphicon-edit
+        %td
+          =link_to post_path(post), method: :delete, :data => { :confirm => 'Do you really want to delete this post?' } do
+            %span.glyphicon.glyphicon-remove

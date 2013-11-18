@@ -16,6 +16,10 @@
         =link_to new_post_path do
           %span.glyphicon.glyphicon-plus-sign 
           New post
+      %li
+        =link_to posts_path do
+          %span.glyphicon.glyphicon-list 
+          Manage posts
   %ul.nav.navbar-nav.pull-right
     - if user_signed_in?
       %li
