@@ -4,11 +4,10 @@ class Ability
   def initialize(user)
       user ||= User.new # guest user (not logged in)
 
-      if user.new_record?
-        can :read, Post
-      else
+      unless user.new_record?
         can :manage, :all
       end
+      
     # Define abilities for the passed in user here. For example:
     #
     #   user ||= User.new # guest user (not logged in)

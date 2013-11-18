@@ -5,7 +5,7 @@ html, body {
 }
 
 body {
-  margin-top:52px;
+  margin-top:50px;
   background-color:#FAFAFA;
 }
 
@@ -17,12 +17,24 @@ body {
   color: #FFF;
   padding-top: 20px;
   padding-bottom:20px;
-  background-color: #F66;
+  padding-left: 48px;
+  background-color: #F05051;
   border-bottom:3px solid #EFEFEF;
 }
 
 .post {
   padding:20px;
+
+  .title {
+    margin-bottom:20px;
+  }
+
+  .content {
+    img {
+      margin-left:auto;
+      margin-right:auto;
+    }
+  }
 }
 
 .sidebar .row {
@@ -38,4 +50,8 @@ body {
 
 .field {
   margin-bottom: 20px;
+}
+
+.pagination-control {
+  text-align: center;
 }

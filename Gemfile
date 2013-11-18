@@ -40,10 +40,11 @@ gem 'annotate'
 gem 'redcarpet'
 gem 'pygmentize'
 gem 'simple_form'
-gem 'will_paginate'
+gem 'will_paginate-bootstrap'
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
+  gem 'factory_girl_rails'
 end
 
 group :doc do

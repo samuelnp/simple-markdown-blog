@@ -2,6 +2,7 @@
   = ENV["BLOG_TITLE"]
 .col-md-8.content
   = render @posts
-  = will_paginate @posts
+  .pagination-control
+    = will_paginate @posts, renderer: BootstrapPagination::Rails
 .col-md-4.sidebar
   = render 'layouts/sidebar'

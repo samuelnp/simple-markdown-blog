@@ -1,2 +1,19 @@
 .row
-  %script{"data-format" => "inline", "data-id" => "#{ENV["LINKEDIN_PROFILE"]}", "data-related" => "false", type: "IN/MemberProfile"}
+  .about
+    %h4= ENV["AUTHOR"]
+    .bio= ENV["BIOGRAPHY"]
+.row
+  %h3 Popular posts
+  .list-group
+    %a.list-group-item{href: "#"}
+      %h4.list-group-item-heading List group item heading
+      %p.list-group-item-text Description group item
+    %a.list-group-item{href: "#"}
+      %h4.list-group-item-heading List group item heading
+      %p.list-group-item-text Description group item
+    %a.list-group-item{href: "#"}
+      %h4.list-group-item-heading List group item heading
+      %p.list-group-item-text Description group item
+    %a.list-group-item{href: "#"}
+      %h4.list-group-item-heading List group item heading
+      %p.list-group-item-text Description group item
