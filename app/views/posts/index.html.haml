@@ -4,11 +4,14 @@
   %table.table.table-striped
     %tr
       %th Post
+      %th Published
       %th
       %th
+
     - @posts.each do |post|
       %tr
         %td= post.title
+        %td= date post.created_at
         %td
           =link_to edit_post_path(post) do
             %span.glyphicon.glyphicon-edit

@@ -1,19 +1,2 @@
-.row
-  .about
-    %h4= ENV["AUTHOR"]
-    .bio= ENV["BIOGRAPHY"]
-.row
-  %h3 Popular posts
-  .list-group
-    %a.list-group-item{href: "#"}
-      %h4.list-group-item-heading List group item heading
-      %p.list-group-item-text Description group item
-    %a.list-group-item{href: "#"}
-      %h4.list-group-item-heading List group item heading
-      %p.list-group-item-text Description group item
-    %a.list-group-item{href: "#"}
-      %h4.list-group-item-heading List group item heading
-      %p.list-group-item-text Description group item
-    %a.list-group-item{href: "#"}
-      %h4.list-group-item-heading List group item heading
-      %p.list-group-item-text Description group item
+=render 'layouts/biography'
+=render 'layouts/tags', tags: @tags

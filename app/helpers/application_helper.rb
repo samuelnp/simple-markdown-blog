@@ -13,4 +13,8 @@ module ApplicationHelper
       content_tag(:span,'', class: "glyphicon glyphicon-tags") + content_tag(:span, item.tag_list)
     end
   end
+
+  def escape(item)
+    URI.encode(item)
+  end
 end

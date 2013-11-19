@@ -19,6 +19,8 @@ class Post < ActiveRecord::Base
 
   acts_as_taggable
 
+  scope :desc, lambda { order("id DESC") }
+  
   def render_markdown
     require 'redcarpet'
     renderer = PygmentizeHTML

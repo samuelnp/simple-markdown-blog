@@ -1,0 +1,7 @@
+.row
+  %h3 Talking about
+  .list-group
+  - tags.each do |tag|
+    %a.list-group-item{href: tag_path(escape(tag.name))}
+      %span.badge= tag.count
+      %h4.list-group-item-heading= tag
