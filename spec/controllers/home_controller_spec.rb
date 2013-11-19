@@ -24,9 +24,9 @@ describe HomeController do
   end
 
   describe "GET 'tag'" do
-    it "should not be successful whithout params" do
+    it "should not be successfull whithout params" do
       get 'tagged', tag: ''
-      response.should_not be_success
+      response.should be_success
     end
 
     it "should get posts collection with example tag" do

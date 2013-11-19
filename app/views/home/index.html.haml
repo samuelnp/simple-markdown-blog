@@ -2,7 +2,7 @@
   = ENV["BLOG_TITLE"]
 .col-md-8.content
   - if @posts.empty?
-    = t 'posts.empty_collectio'
+    = t 'posts.empty_collection'
   - else
     = render linkable_title(@posts)
   .pagination-control
