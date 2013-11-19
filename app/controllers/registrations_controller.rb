@@ -8,7 +8,7 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def edit
-    redirect_to root_path
+    redirect_to root_path, notice: "Feature disabled in heroku demo"
   end
 
   def update
