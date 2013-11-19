@@ -6,14 +6,14 @@ It's still in active development. I want to add more features to get a fully fun
 
 ## Use it
 
-For use it you only need clone this repo and install.
+For use it you only need to clone this repo and install.
 
 ```
 bundle
 rake db:setup
 rails s
 ```
-**NOTE** I'll add very soon support to deploy with Capistrano in Production environments without pain.
+**NOTE** Very soon I'll add support to deploy with Capistrano in Production environments without pain.
 
 ## Customize it
 

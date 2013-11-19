@@ -1,0 +1,27 @@
+# Add application configuration variables here, as shown below.
+development:
+  PAGINATION: 10
+  BLOG_TITLE: BLOG EXAMPLE
+  AUTHOR: THIS IS ME
+  AUTHOR_EMAIL: user@example.com
+  AUTHOR_PASS: example.password
+  BIOGRAPHY: "Ruby on Rails Developer at @work. I develop web applications for human beings"
+  HOST_URL: localhost:3000
+
+test:
+  PAGINATION: 10
+  BLOG_TITLE: BLOG EXAMPLE
+  AUTHOR: THIS IS ME
+  AUTHOR_EMAIL: user@example.com
+  AUTHOR_PASS: example.password
+  BIOGRAPHY: "Ruby on Rails Developer at @work. I develop web applications for human beings"
+  HOST_URL: localhost:3000
+
+production:
+  PAGINATION: 10
+  BLOG_TITLE: BLOG EXAMPLE
+  AUTHOR: THIS IS ME
+  AUTHOR_EMAIL: user@example.com
+  AUTHOR_PASS: example.password
+  BIOGRAPHY: "Ruby on Rails Developer at @work. I develop web applications for human beings"
+  HOST_URL: url.example.com
