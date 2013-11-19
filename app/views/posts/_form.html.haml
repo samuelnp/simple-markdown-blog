@@ -12,6 +12,10 @@
   .field
     #epiceditor
     = f.text_area :body, id: "epiceditor-textarea"
+  .field
+    .input-group
+      %span.input-group-addon Tags
+      = f.text_field :tag_list, class: "form-control"
   .actions.pull-right
     = f.submit 'Save', class: "btn btn-primary"
 

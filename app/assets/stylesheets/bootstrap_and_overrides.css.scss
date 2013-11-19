@@ -36,6 +36,22 @@ body {
       margin-right:auto;
     }
   }
+
+  .actions {
+    .action {
+      display: inline;
+      margin-right: 10px;
+
+      span.glyphicon {
+        margin-right: 4px;
+      }
+    }
+  }
+}
+
+/* Fix total width for tags glyphicon to render correctly */
+.glyphicon-tags {
+  width:15px !important;
 }
 
 .sidebar .row {

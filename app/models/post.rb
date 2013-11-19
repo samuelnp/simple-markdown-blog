@@ -11,8 +11,13 @@
 #
 
 class Post < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :title, use: :slugged
+
   validates_presence_of :title, :body
   before_save :render_markdown
+
+  acts_as_taggable
 
   def render_markdown
     require 'redcarpet'

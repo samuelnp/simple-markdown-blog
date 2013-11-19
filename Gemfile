@@ -41,6 +41,8 @@ gem 'redcarpet'
 gem 'pygmentize'
 gem 'simple_form'
 gem 'will_paginate-bootstrap'
+gem 'acts-as-taggable-on'
+gem 'friendly_id', '~> 5.0.0'
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
