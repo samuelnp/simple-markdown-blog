@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+user = User.find_or_create_by_email({
+    email: ENV['AUTHOR_EMAIL'],
+    password: ENV['AUTHOR_PASS'],
+    password_confirmation: ENV['AUTHOR_PASS'],
+  });

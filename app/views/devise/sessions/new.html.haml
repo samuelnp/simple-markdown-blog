@@ -1,5 +1,5 @@
 - content_for :jumbotron do
-  %h2 Sign in
+  %h2=t 'users.login'
 
 .col-md-4
   = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
@@ -18,10 +18,10 @@
         .input-group
           .checkbox
             = f.check_box :remember_me
-            Remember me
+            =t 'users.remember_me'
 
     .field
-      = f.submit "Sign in", class: "btn btn-primary"
+      = f.submit t('users.login'), class: "btn btn-primary"
 
     .field
       = render "devise/shared/links"

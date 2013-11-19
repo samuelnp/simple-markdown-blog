@@ -1,4 +1,5 @@
 - content_for :jumbotron do
-  Content and comments
-
+  =t 'posts.show'
+- content_for :title do
+  = @post.title + " | " + ENV['BLOG_TITLE']
 = render @post

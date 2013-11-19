@@ -20,4 +20,40 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  posts:
+    created: Post was successfully created.
+    updated: Post was successfully updated.
+    empty_collection: You don't have any posts yet :(
+    new_post: New post
+    manage_posts: Manage posts
+    title: Title
+    tags: Tags
+    delete_post: Do you really want to delete this post?
+    edit: Edit post
+    administer: Administer posts
+    post: Post
+    published: Published
+    create_new: Create new post
+    show: Post and Comments
+  tags:
+    empty_collection: You don't have any tags yet :(
+    talking_about: Talking about
+  users:
+    edit_account: Edit account
+    logout: Logout
+    login: Login
+    email: Email
+    password: Password
+    password_confirmation: Password confirmation
+    current_password: Current password
+    confirm_current_password: We need your current password to confirm your changes
+    leave_blank: Leave blank if you don't want to change it
+    forgot_password: Forgot your password?
+    send_reset_password: Send me reset password instructions
+    change_password: Change password
+    new_password: New password
+    remember_me: Remember me
+  toggle_navigation: Toggle navigation
+  home: Home
+  save: Save
+  update: Update

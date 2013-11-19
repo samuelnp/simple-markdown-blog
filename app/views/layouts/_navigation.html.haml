@@ -1,6 +1,6 @@
 .navbar-header.offset2
   %button.navbar-toggle{"data-target" => ".navbar-ex1-collapse", "data-toggle" => "collapse", type: "button"}
-    %span.sr-only Toggle navigation
+    %span.sr-only= t 'toggle_navigation'
     %span.icon-bar
     %span.icon-bar
     %span.icon-bar
@@ -10,30 +10,30 @@
     %li
       =link_to root_path do
         %span.glyphicon.glyphicon-home 
-        Home
+        =t 'home'
     - if user_signed_in?
       %li
         =link_to new_post_path do
           %span.glyphicon.glyphicon-plus-sign 
-          New post
+          =t 'posts.new_post'
       %li
         =link_to posts_path do
           %span.glyphicon.glyphicon-list 
-          Manage posts
+          =t 'posts.manage_posts'
   %ul.nav.navbar-nav.pull-right
     - if user_signed_in?
       %li
         = link_to edit_user_registration_path do
           %span.glyphicon.glyphicon-user
-          Edit account
+          =t 'users.edit_account'
       %li
         = link_to destroy_user_session_path, :method=>'delete' do
           %span.glyphicon.glyphicon-ban-circle
-          Logout
+          =t 'users.logout'
     - else
       %li
         = link_to new_user_session_path do
           %span.glyphicon.glyphicon-user
-          Login
+          =t 'users.login'
 
 / /.navbar-collapse

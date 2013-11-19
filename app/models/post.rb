@@ -8,6 +8,7 @@
 #  created_at :datetime
 #  updated_at :datetime
 #  html       :text
+#  slug       :string(255)
 #
 
 class Post < ActiveRecord::Base

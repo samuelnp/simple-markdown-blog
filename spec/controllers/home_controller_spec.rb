@@ -12,5 +12,27 @@ describe HomeController do
       get 'index'
       assigns(:posts).should eq([post])
     end
+
+    it "should paginate results" do
+
+      12.times do
+        post = FactoryGirl.create(:post)
+      end
+      get 'index', page: 2
+      assigns(:posts).length.should == 2
+    end
+  end
+
+  describe "GET 'tag'" do
+    it "should not be successful whithout params" do
+      get 'tagged', tag: ''
+      response.should_not be_success
+    end
+
+    it "should get posts collection with example tag" do
+      post = FactoryGirl.create(:post, tag_list: 'example')
+      get 'tagged', tag: 'example'
+      assigns(:posts).should eq([post])
+    end
   end
 end

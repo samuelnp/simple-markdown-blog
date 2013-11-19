@@ -1,0 +1,10 @@
+- content_for :jumbotron do
+  =t 'users.forgot_password'
+.col-md-4
+  = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
+    = devise_error_messages!
+    .field
+      .input-group
+        %span.input-group-addon=t 'users.email'
+        = f.email_field :email, :autofocus => true, class: 'form-control'
+    %div= f.submit t('users.send_reset_password'), class: 'btn btn-primary'

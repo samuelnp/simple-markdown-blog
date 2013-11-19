@@ -1,0 +1,16 @@
+- content_for :jumbotron do
+  =t 'users.change_password'
+.col-md-4
+  = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f|
+    = devise_error_messages!
+    = f.hidden_field :reset_password_token
+    .field
+      .input-group
+        %span.input-group-addon=t 'users.new_password'
+        = f.password_field :password, :autofocus => true, class: 'form-control'
+    .field
+      .input-group
+        %span.input-group-addon=t 'users.password_confirmation'
+        = f.password_field :password_confirmation, class: 'form-control'
+    .field
+      = f.submit t('users.change_password'), class: 'btn btn-primary'

@@ -1,7 +1,10 @@
 - content_for :jumbotron do
   = ENV["BLOG_TITLE"]
 .col-md-8.content
-  = render linkable_title(@posts)
+  - if @posts.empty?
+    = t 'posts.empty_collectio'
+  - else
+    = render linkable_title(@posts)
   .pagination-control
     = will_paginate @posts, renderer: BootstrapPagination::Rails
 .col-md-4.sidebar

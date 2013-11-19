@@ -11,7 +11,7 @@
         .pull-right
           =link_to edit_post_path(post) do
             %span.glyphicon.glyphicon-edit
-          =link_to post_path(post), method: :delete, :data => { :confirm => 'Do you really want to delete this post?' } do
+          =link_to post_path(post), method: :delete, :data => { :confirm => t('posts.delete_post') } do
             %span.glyphicon.glyphicon-remove
   .content
     = raw post.html
