@@ -2,4 +2,5 @@
   =t 'posts.show'
 - content_for :title do
   = @post.title + " | " + ENV['BLOG_TITLE']
-= render @post
+
+= render partial: @post, locals: { full: true }

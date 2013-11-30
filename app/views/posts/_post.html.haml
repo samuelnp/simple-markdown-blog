@@ -7,6 +7,8 @@
         %span= date post.created_at
       .action
         = tags(post)
+      .action
+        %span=link_to "See comments", post_path(post, anchor: 'disqus_thread')
       - if current_user
         .pull-right
           =link_to edit_post_path(post) do
@@ -15,3 +17,6 @@
             %span.glyphicon.glyphicon-remove
   .content
     = raw post.html
+
+  - if defined?(full) && full
+    = render 'disqus'

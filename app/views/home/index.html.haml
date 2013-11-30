@@ -9,3 +9,5 @@
     = will_paginate @posts, renderer: BootstrapPagination::Rails
 .col-md-4.sidebar
   = render 'layouts/sidebar'
+- content_for :body_js do
+  = render 'disqus_count'

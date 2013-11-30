@@ -41,6 +41,11 @@ gem 'will_paginate-bootstrap'
 gem 'acts-as-taggable-on'
 gem 'friendly_id', '~> 5.0.0'
 
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
