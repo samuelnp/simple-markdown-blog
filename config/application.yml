@@ -2,6 +2,7 @@
 development:
   PAGINATION: 10
   BLOG_TITLE: BLOG EXAMPLE
+  BLOG_DESCRIPTION: BLOG DESCRIPTION
   AUTHOR: THIS IS ME
   AUTHOR_EMAIL: user@example.com
   AUTHOR_PASS: example.password
@@ -11,6 +12,7 @@ development:
 test:
   PAGINATION: 10
   BLOG_TITLE: BLOG EXAMPLE
+  BLOG_DESCRIPTION: BLOG DESCRIPTION
   AUTHOR: THIS IS ME
   AUTHOR_EMAIL: user@example.com
   AUTHOR_PASS: example.password
@@ -20,6 +22,7 @@ test:
 production:
   PAGINATION: 10
   BLOG_TITLE: BLOG EXAMPLE
+  BLOG_DESCRIPTION: BLOG DESCRIPTION
   AUTHOR: THIS IS ME
   AUTHOR_EMAIL: user@example.com
   AUTHOR_PASS: example.password

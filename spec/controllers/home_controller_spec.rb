@@ -35,4 +35,11 @@ describe HomeController do
       assigns(:posts).should eq([post])
     end
   end
+
+  describe "GET 'feed'" do
+    it "should get rss feed" do
+      get 'index', format: :rss
+      response.should be_success
+    end
+  end
 end

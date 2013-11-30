@@ -4,6 +4,7 @@
     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
     %title= content_for?(:title) ? yield(:title) : ENV['BLOG_TITLE']
     %meta{content: content_for?(:description) ? yield(:description) : ENV['BLOG_TITLE'], name: "description"}/
+    = auto_discovery_link_tag(:rss, "#{ENV["HOST_URL"]}/feed")
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags

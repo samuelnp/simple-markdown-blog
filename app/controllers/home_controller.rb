@@ -10,6 +10,13 @@ class HomeController < ApplicationController
     render action:'index'
   end
 
+  def feed
+    @posts = Post.desc.paginate(:page => params[:page])
+    respond_to do |format|
+      format.rss { render @posts, :layout => false }
+    end
+  end
+
   private
 
   def tags
